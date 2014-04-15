@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="listapp">
+    <head>
+        {{$ scripts}}
+        {{$ styles}}
+        <title>Quicklist</title>
+        <link rel="icon" type="image/png" href="./favicon.ico">
+        <script src="/scripts/PlaylistController.js"></script>\
+        <script src="/bower_components/angular-localstorage/angular-local-storage.js"></script>
+    </head>
+    <style type="text/css">
+    	.nav-tabs > li, .nav-pills > li {
+		    float:none;
+		    display:inline-block;
+		    *display:inline; /* ie7 fix */
+		     zoom:1; /* hasLayout ie7 trigger */
+		}
+
+		.nav-tabs, .nav-pills {
+		    text-align:center;
+		}
+    </style>
+    <body>
+    		<div>
+	    		<ul class="nav nav-pills">
+					  <li id="homeNav"><a href="/">Home</a></li>
+					  <li id="playNav"><a href="/playlists">Playlists</a></li>
+					</ul>
+				</div>
+        <ng-view>
+        </ng-view>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<div class="wrapper">
+
+    <h4>Saved Playlists</h4>
+
+    <accordion close-others="oneAtATime" ng-repeat="playlist in playlists">
+        <accordion-group is-open="isopen">
+            <accordion-heading>
+                {{playlist.selected_name}} 
+                <i class="pull-right" ng-class="{'icon-chevron-down': isopen, 'icon-chevron-right': !isopen}"></i> 
+                <span class="label label-danger pull-right">METAL</span>
+                <span class="pull-right" style="padding-right:25px;"> {{playlist.total_tracks}} Tracks</span>
+            </accordion-heading>
+                <div ng-repeat="track in playlist.tracks">
+                
+                        {{track.title}}<br />
+                </div>
+        </accordion-group>
+    </accordion>
+
+</div>
